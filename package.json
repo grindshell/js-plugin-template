@@ -1,0 +1,15 @@
+{
+  "name": "grindshell-js-plugin-template",
+  "version": "0.1.0",
+  "description": "Grindshell JS plugin template",
+  "main": "./src/main.js",
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "build": "node esbuild.js && podman run --rm -v dist:/work:Z ghcr.io/grindshell/js-plugin-builder:latest main.js main.d.ts main.wasm"
+  },
+  "devDependencies": {
+    "@extism/js-pdk": "^1.0.1",
+    "esbuild": "^0.21.1"
+  }
+}
